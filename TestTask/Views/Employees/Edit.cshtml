@@ -1,0 +1,53 @@
+@model TestTask.Entities.Employee
+@{
+    ViewBag.Title = "Edit Employee";
+    Layout = "_Layout";
+}
+
+<h2>Edit Employee</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Payroll Number</label>
+        <input asp-for="PayrollNumber" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Forenames</label>
+        <input asp-for="ForeNames" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Surname</label>
+        <input asp-for="Surname" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Date of Birth</label>
+        <input asp-for="DateOfBirth" type="date" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Telephone</label>
+        <input asp-for="Telephone" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Mobile</label>
+        <input asp-for="Mobile" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Postcode</label>
+        <input asp-for="Postcode" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" type="email" />
+    </div>
+    <div class="form-group">
+        <label>Start Date</label>
+        <input asp-for="StartDate" type="date" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="List" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Import Results";
+}
+
+<h2>Import Results</h2>
+
+<div>
+    <p><strong>Successfully Processed Rows:</strong> @ViewData["ProcessedCount"]</p>
+    <p><strong>Failed Rows:</strong> @ViewData["FailedCount"]</p>
+</div>
+
+<div>
+    <a href="@Url.Action("List", "Employees")" class="btn btn-primary">Back to Employee List</a>
+</div>
